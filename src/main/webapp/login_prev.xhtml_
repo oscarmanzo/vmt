@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
+	<head>
+    	<title>Please Login</title>
+  	</head>
+
+  	<body>
+
+		<div>
+			<h:panelGroup rendered="#{not empty error}">
+				Invalid username and password.<br/><br/>
+			</h:panelGroup>
+	              <h:panelGroup rendered="#{not empty logout}">
+	              	You have been logged out.<br/><br/>
+			</h:panelGroup>
+		</div>
+		
+	    <div>
+	        <form name="f" action="login" method="post">               
+	            <fieldset>
+	                <legend>Please Login !!!</legend>
+ 
+	                <label for="username">Username:</label><br/>
+	                <input type="text" id="username" name="username"/>
+	                
+	                <br/><br/>
+	                
+	                <label for="password">Password:</label><br/>
+	                <input type="password" id="password" name="password"/>
+	                
+	                <br/>
+	                <br/>
+	                
+	                <div>
+	                    <button type="submit">Log in</button>
+	                </div>
+	            </fieldset>
+	        </form>
+	    </div>
+  	</body>
+
+</html>
